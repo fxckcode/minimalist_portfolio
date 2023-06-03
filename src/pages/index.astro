@@ -1,15 +1,50 @@
 ---
+import Base from "../layout/Base.astro";
 ---
+<Base>
+	<div class="intro">
+		<div class="intro-info">
+			<h2>Diego Duran | FxckCode</h2>
+			<span>FullStack Developer</span>
+			<div class="links">
+				<a href="https://github.com/fxckcode" class="link" id="github" target="_blank">
+					<i class="link-icon fa-lg fab fa-github"></i>
+				</a>
+				<a href="https://www.linkedin.com/in/diego-alejandro-duran-001324257/" class="link" target="_blank">
+					<i class="link-icon fa-lg fab fa-linkedin"></i>
+				</a>
+				<a href="" class="link">
+					<i class="link-icon fa-lg fa-solid fa-file-lines"></i>
+				</a>
+				<a href="" class="link">
+					<i class="link-icon fa-lg fa-solid fa-envelope"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+</Base>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+
+<style lang="scss">
+    .intro {
+        @apply w-full bg-slate-900 h-96 text-white flex justify-center items-center text-center
+	}
+
+	.intro > .intro-info {
+		@apply flex flex-col gap-5 w-full justify-center items-center
+	}
+
+	.intro > .intro-info > h2 {
+		@apply text-2xl font-bold
+	}
+
+	.intro > .intro-info > span {
+		@apply text-gray-700 text-center text-xl
+	}
+
+	.intro > .intro-info > .links {
+		@apply flex gap-8 m-auto
+	}
+</style>
