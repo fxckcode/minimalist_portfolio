@@ -4,28 +4,74 @@ import Base from "../layout/Base.astro";
 <Base>
 	<div class="intro">
 		<div class="intro-info">
-			<h2>Diego Duran | FxckCode</h2>
+			<h2>Diego Alejandro Duran</h2>
 			<span>FullStack Developer</span>
 			<div class="links">
-				<a href="https://github.com/fxckcode" class="link" id="github" target="_blank">
-					<i class="link-icon fa-lg fab fa-github"></i>
-				</a>
-				<a href="https://www.linkedin.com/in/diego-alejandro-duran-001324257/" class="link" target="_blank">
-					<i class="link-icon fa-lg fab fa-linkedin"></i>
-				</a>
-				<a href="" class="link">
-					<i class="link-icon fa-lg fa-solid fa-file-lines"></i>
-				</a>
-				<a href="" class="link">
-					<i class="link-icon fa-lg fa-solid fa-envelope"></i>
-				</a>
+				<button id="github">
+					<a href="https://github.com/fxckcode" class="link" target="_blank">
+						<i class="link-icon fa-lg fab fa-github"></i>
+					</a>
+				</button>
+				<button id="linkedin">
+					<a href="https://www.linkedin.com/in/diego-alejandro-duran-001324257/" class="link" target="_blank">
+						<i class="link-icon fa-lg fab fa-linkedin"></i>
+					</a>
+				</button>
+				<button id="cv">
+					<a href="" class="link">
+						<i class="link-icon fa-lg fa-solid fa-file-lines"></i>
+					</a>
+				</button>
+				<button id="email">
+					<a href="mailto:alejandroduran076@gmail.com" class="link">
+						<i class="link-icon fa-lg fa-solid fa-envelope"></i>
+					</a>
+				</button>
 			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="content-info">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quo, error minima qui quia temporibus commodi! Eveniet, qui. Veniam distinctio, vero est pariatur iste ut. Enim debitis accusamus vitae natus.</p>
 		</div>
 	</div>
 	<script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
-</Base>
+	<script>
+		import tippy from "tippy.js";
+		import 'tippy.js/dist/tippy.css';
+		import 'tippy.js/themes/material.css'
+		import 'tippy.js/animations/scale.css';
 
+		tippy("#github", {
+			content: "My Github :)",
+			theme: "material",
+			animation: "scale",
+			animateFill: true,
+		})
+
+		tippy("#linkedin", {
+			content: "My LinkedIn :0",
+			theme: "material",
+			animation: "scale",
+			animateFill: true,
+		})
+
+		tippy("#cv", {
+			content: "My CV ;D",
+			theme: "material",
+			animation: "scale",
+			animateFill: true,
+		})
+
+		tippy("#email", {
+			content: "Contact Me By Mail :=",
+			theme: "material",
+			animation: "scale",
+			animateFill: true,
+		})
+	</script>
+</Base>
 
 <style lang="scss">
     .intro {
@@ -33,18 +79,26 @@ import Base from "../layout/Base.astro";
 	}
 
 	.intro > .intro-info {
-		@apply flex flex-col gap-5 w-full justify-center items-center
+		@apply flex flex-col gap-4 w-full justify-center items-center
 	}
 
 	.intro > .intro-info > h2 {
-		@apply text-2xl font-bold
+		@apply text-3xl font-bold
 	}
 
 	.intro > .intro-info > span {
-		@apply text-gray-700 text-center text-xl
+		@apply text-gray-500 text-center text-xl mb-8
 	}
 
 	.intro > .intro-info > .links {
 		@apply flex gap-8 m-auto
+	}
+
+	.content {
+		@apply w-full h-full bg-gray-900 text-white
+	}
+
+	.content > .content-info {
+		@apply w-1/2 m-auto pt-10
 	}
 </style>
