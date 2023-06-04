@@ -90,19 +90,23 @@ import Base from "../layout/Base.astro";
 	}
 
 	.content {
-		@apply w-full h-full bg-gray-900 text-white
+		@apply w-full h-auto bg-gray-900 text-white
 	}
 
 	.content > .content-info {
-		@apply w-1/2 m-auto pt-10 text-center text-gray-400 font-bold sm:text-3xl text-2xl tracking-wide flex flex-col gap-6
+		@apply lg:w-1/2 m-auto py-10 px-3 text-center text-gray-400 font-bold sm:text-3xl text-2xl tracking-wide flex flex-col gap-6
 	}
 
 	.content > .content-info > .education {
 		@apply flex flex-col gap-2
 	}
 
+	.content > .content-info > .education > p {
+		@apply text-sm lg:text-2xl
+	}
+
 	.content > .content-info > .education > ul {
-		@apply text-sm list-disc px-8
+		@apply lg:text-sm list-disc px-8 text-[12px]
 	}
 
 	.content > .content-info > .education > ul > li::marker {
