@@ -14,6 +14,40 @@
 <body>
     <slot />
 </body>
+<script>
+    import tippy from "tippy.js";
+    import 'tippy.js/dist/tippy.css';
+    import 'tippy.js/themes/material.css'
+    import 'tippy.js/animations/scale.css';
+
+    tippy("#github", {
+        content: "My Github :)",
+        theme: "material",
+        animation: "scale",
+        animateFill: true,
+    })
+
+    tippy("#linkedin", {
+        content: "My LinkedIn :0",
+        theme: "material",
+        animation: "scale",
+        animateFill: true,
+    })
+
+    tippy("#cv", {
+        content: "My CV ;D",
+        theme: "material",
+        animation: "scale",
+        animateFill: true,
+    })
+
+    tippy("#email", {
+        content: "Contact Me By Mail :=",
+        theme: "material",
+        animation: "scale",
+        animateFill: true,
+    })
+</script>
 </html>
 
 <style lang="scss">
