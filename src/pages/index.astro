@@ -32,7 +32,34 @@ import Base from "../layout/Base.astro";
 	</div>
 	<div class="content">
 		<div class="content-info">
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quo, error minima qui quia temporibus commodi! Eveniet, qui. Veniam distinctio, vero est pariatur iste ut. Enim debitis accusamus vitae natus.</p>
+			<h2>Education</h2>
+			<div class="education text-left">
+				<h3 class="text-2xl">Humberto Muñoz Ordoñez</h3>
+				<p class="text-gray-700 text-lg">High School Graduate | 2017  - 2022</p>
+			</div>
+			<div class="education text-left">
+				<h3 class="text-2xl">Mision Tic</h3>
+				<p class="text-gray-700 text-lg">FullStack Course | Feb 2021  - Dec 2021</p>
+				<ul>
+					<li>HTML | CSS | JS - PYTHON | DJANGO</li>
+				</ul>
+			</div>
+			<div class="education text-left">
+				<h3 class="text-2xl">SENA</h3>
+				<p class="text-gray-700 text-lg">System Technique  | Feb 2021  - Dec 2022</p>
+				<p class="text-gray-700 text-lg">Software Analysis and Development | Feb 2023  - Jun 2024</p>
+				<ul>
+					<li>HTML | CSS | JS - PHP | KOTLYN | PYTHON | SQL</li>
+				</ul>
+			</div>
+			<h2>Projects</h2>
+			<div class="education text-left">
+				<h3 class="text-2xl">LinkCafé</h3>
+				<p class="text-gray-700 text-lg">Professional Social Network for coffee growers.</p>
+				<ul>
+					<li>In which he specializes in the promotion of the application of good practices in cultivation and the possibility of commenting but with the variant that everything is based</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 	<script src="https://unpkg.com/@popperjs/core@2"></script>
@@ -99,6 +126,18 @@ import Base from "../layout/Base.astro";
 	}
 
 	.content > .content-info {
-		@apply w-1/2 m-auto pt-10
+		@apply w-1/2 m-auto pt-10 text-center text-gray-400 font-bold sm:text-3xl text-2xl tracking-wide flex flex-col gap-6
+	}
+
+	.content > .content-info > .education {
+		@apply flex flex-col gap-2
+	}
+
+	.content > .content-info > .education > ul {
+		@apply text-sm list-disc px-8
+	}
+
+	.content > .content-info > .education > ul > li::marker {
+		color: aqua;
 	}
 </style>
